@@ -5,8 +5,8 @@ workflows:
   build:
     jobs:
       - build:
-        filters:
-          branches: 
+          filters:
+           branches: 
             only:
               - main
         
