@@ -39,7 +39,7 @@ jobs:
             - ./node_modules
       - run:
           name: docker-login
-          Command: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+          command: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
   deploy:
     docker:
       - image: circleci/node:10.16.3
