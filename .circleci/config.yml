@@ -21,7 +21,7 @@ jobs:
   build:
     working_directory: ~/example_application
     docker:
-      - image: circleci/node:10.16.3
+      - image: circleci/node:latest
     steps:
       - checkout
       - setup_remote_docker
@@ -48,7 +48,7 @@ jobs:
           command: docker push $IMAGE_NAME
   deploy:
     docker:
-      - image: circleci/node:10.16.3
+      - image: circleci/node:latest
     steps:
       - run:
           name: deploy-application
